@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JavaScript Project</title>
+</head>
+<body class="bg-gradient-to-r from-black to-blue-700">
+    <!-- bg-[linear-gradient(90deg,_black,_blue)] -->
+    <section> 
+        
+        <nav class="m-3 flex items-center justify-between p-4 md:flex md:justify-between text-gray-300 rounded-lg sticky top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg">
+            <span class="logo text-3xl">JS_PROJECT</span>
+            <!-- This is the "underlay" -->
+
+            <ul id="menu" class="flex-col mt-2 pt-2 text-gray-300 bg-gradient-to-r from-black to-blue-700 md:flex-row md:items-center md:space-x-4 md:flex  z-[50] md:z-auto md:static absolute w-full left-0 bg-[linear-gradient(45deg,_rgba(15,255,255,0.3), _rgba(255,255,255,0.4))] backdrop-blur-[100px] border-t-0 border border-gray-500/30 shadow-lg top-[-400px]   transition-all ease-in duration-500">
+                <li class="my-5"><a href="index.html" class="text-gray-300 hover:text-white pl-3">Home</a></li>
+                <li class="my-5"><a href="docs.html" class="text-gray-300 hover:text-white pl-3">Documentation</a></li>
+                <li class="my-5"><a href="about.html" class="text-gray-300 hover:text-white pl-3">About</a></li>
+                <li class="my-5"><a href="calculator.html" class="text-gray-300 hover:text-white pl-3">Calculator</a></li>
+                <li class="my-5"><a href="dayPlanner.html" class="text-gray- hover:text-white pl-3">Day Planner</a></li>
+            </ul>
+            <div class="md:hidden">
+                <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn"></i>
+            </div>
+        </nav>  
+        
+    </section>
+   
+      
+    <div class="content text-white text-center mt-[150px]">
+        <h1 class="text-2xl mb-3 name">I'm Chukwu Daniel</h1>
+        <h3 class="text-4xl md:text-5xl md:leading-tight">Discover my JavaScript <br class="block md:hidden"> projects today</h3>
+            <div class="flex mt-[20px]">
+                <a href="about.html" class="m-auto border-2 border-white p-2 hover:bg-white hover:text-blue-900 hover:font-bold duration-300 rounded-2xl cursor-pointer">About Me</a>
+            </div>
+    </div>
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

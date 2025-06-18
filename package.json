@@ -1,0 +1,23 @@
+{
+  "name": "javascript_project",
+  "version": "1.0.0",
+  "description": "Javascript project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo\\\" error: no test specified \\\" && exit 1",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "javaScript_Project"
+  },
+  "keywords": [
+    "project"
+  ],
+  "author": "Chukwu Daniel",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.10",
+    "tailwindcss": "^4.1.10"
+  }
+}

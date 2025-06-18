@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JavaScript Project</title>
+</head>
+<body class="bg-gradient-to-r from-black to-blue-700">
+    <!-- bg-[linear-gradient(90deg,_black,_blue)] -->
+    <section>
+        <nav class="m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[50px] md:flex md:items-center md:justify-between sticky top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg">
+            <span class="logo text-3xl">JS_PROJECT</span>
+            <ul class="gap-4 pb-2 pl-4 text-gray-300 bg-gradient-to-r from-black to-blue-700 md:flex md:items-center z-[-1] md:z-auto md:static absolute backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg border-t-0 w-full left-0 md:w-auto md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                <li class="md:my-0 my-5"><a href="docs.html" class="text-gray-300 hover:text-white">Documentation</a></li>
+                <li class="md:my-0 my-5"><a href="about.html" class="text-gray-300 hover:text-white">About Me</a></li>
+                <li class="md:my-0 my-5">
+                    <a href="calculator.html" class="text-gray-300 hover:text-white">Calculator</a>
+                </li>
+                <li class="md:my-0 my-5"><a href="dayPlanner.html" class="text-gray-300 hover:text-white">Day Planner</a></li>
+            </ul>
+            <div class="md:hidden">
+                <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn"></i>
+            </div>
+        </nav>
+    
+        <div class="content text-white text-center mt-[20px]">
+            <h1 class="text-2xl mb-3">Calculator</h1>
+        </div>
+
+        <div class="px-[40px] grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:mb-[40px]">
+            <div class="text-white border-2 border-gray-300 rounded-lg">
+                <h2 class="font-medium text-center py-4">Retirement Age Calculator</h2>
+                <div class="w-full">
+                    <img class="object-cover w-full h-[200px]" src="images/retirement calculator.avif" alt="">
+                </div>
+                <div>
+                    <form class="mt-[30px] flex flex-col px-10 pb-4" id="retire_form">
+                        <input type="number" id="retire" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter year of birth">
+                        <div class="mt-4 flex">
+                            <input type="submit" class="py-1 px-3 border border-gray-300 m-auto rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="Calculate">
+                        </div>
+                        <div class="mt-[20px]">
+                            <p class="retire-feedback text-center p-2"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-white border-2 border-gray-300 rounded-lg" id="invest_calculator">
+                <h2 class="font-medium text-center py-4">Investment Calculator</h2>
+                <div class="w-full">
+                    <img class="object-cover w-full h-[200px]" src="images/accounting-concept-illustration_114360-16970.avif" alt="">
+                </div>
+                <div>
+                    <form class="mt-[30px] flex flex-col gap-y-3 px-10 pb-10" id="invest_calculator">
+                        <input type="number" id="invest_amt" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter investment amount">
+                        <select name="" id="duration" class="text-gray-300 py-1 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:outline-0">
+                            <option value="">Duration (months)</option>
+                            <option value="1" class="text-blue-900">1 Month</option>
+                            <option value="2" class="text-blue-900">2 Months</option>
+                            <option value="3" class="text-blue-900">3 Months</option>
+                        </select>
+                        <span class="text-white text-center">NOTE: Investment Rate is 20%</span>
+                        <div class="mt-4 flex">
+                            <input type="submit" class="py-1 px-3 border border-gray-300 m-auto rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="Calculate">
+                        </div>
+                        <div class="mt-[20px]">
+                            <p class="investment-feedback text-center p-2"></p>
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-white border-2 border-gray-300 rounded-lg">
+                <h2 class="font-medium text-center py-4">Loan Calculator</h2>
+                <div class="w-full">
+                    <img class="object-cover w-full h-[200px]" src="images/loan calclator.avif" alt="">
+                </div>
+                <div>
+                    <form class="mt-[30px] flex flex-col gap-y-3 px-10 pb-10" id="loan_form">
+                        <input id="loan_amount" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter amount to borrow">
+                         <select name="" id="loanTime" class="text-gray-300 py-1 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:outline-0">
+                            <option value="">Duration (Years)</option>
+                            <option value="1" class="text-blue-900">1 Year</option>
+                            <option value="2" class="text-blue-900">2 Years</option>
+                            <option value="3" class="text-blue-900">3 Years</option>
+                        </select>
+                        <span class="text-white text-center">NOTE: Loan Rate is 20%</span>
+                        <div class="mt-4 flex">
+                            <input type="submit" class="py-1 px-3 border border-gray-300 m-auto rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="Calculate">
+                        </div>
+                        <div class="mt-[20px]">
+                            <p class="loan-feedback text-center p-2"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-white border-2 border-gray-300 rounded-lg mb-[40px]">
+                <h2 class="font-medium text-center py-4">Simple Calculator</h2>
+                <div class="w-full">
+                    <img class="object-cover w-full h-[200px]" src="images/simple calculator.avif" alt="">
+                </div>
+                <div>
+                    <form class="invest mt-[30px] flex flex-col gap-y-3 px-10 pb-10" id="simple_calcForm">
+                        <input id="first_no" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter first number">
+                        <div class="sn_ctn p-2 text-center text-white font-bold"></div>
+                        <input id="second_no" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter second number">
+                        <div class="flex justify-around">
+                            <button class="add py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">+</button>
+                            <button class="minus py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">-</button>
+                            <button class="division py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">/</button>
+                            <button class="multiply py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">*</button>
+                            <button class="modulos py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">%</button>
+                        </div>
+                        
+                        <div class="mt-[20px]">
+                            <p class="simpleCalc-feedback text-center p-2"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+
+
+
+    <script src="js/index.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
