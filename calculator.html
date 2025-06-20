@@ -11,15 +11,15 @@
     <!-- bg-[linear-gradient(90deg,_black,_blue)] -->
     <section>
         <nav class="m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[50px] md:flex md:items-center md:justify-between sticky top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg">
-            <span class="logo text-3xl">JS_PROJECT</span>
+            <a class="logo text-3xl" href="index.html">DANIEL</a>
             <ul class="gap-4 pb-2 pl-4 text-gray-300 bg-gradient-to-r from-black to-blue-700 md:flex md:items-center z-[-1] md:z-auto md:static absolute backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg border-t-0 w-full left-0 md:w-auto md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-                <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
-                <li class="md:my-0 my-5"><a href="docs.html" class="text-gray-300 hover:text-white">Documentation</a></li>
+                <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Documentation</a></li>
                 <li class="md:my-0 my-5"><a href="about.html" class="text-gray-300 hover:text-white">About Me</a></li>
                 <li class="md:my-0 my-5">
                     <a href="calculator.html" class="text-gray-300 hover:text-white">Calculator</a>
                 </li>
-                <li class="md:my-0 my-5"><a href="dayPlanner.html" class="text-gray-300 hover:text-white">Day Planner</a></li>
+                <li class="md:my-0 my-5"><a href="noGuess.html" class="text-gray- hover:text-white ">No. Guessing Game</a></li>
+                <li class="md:my-0 my-5"><a href="primeNo.html" class="text-gray- hover:text-white">Prime No. Checker</a></li>
             </ul>
             <div class="md:hidden">
                 <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn"></i>
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <form class="mt-[30px] flex flex-col px-10 pb-4" id="retire_form">
-                        <input type="number" id="retire" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter year of birth">
+                        <input type="number" id="retire" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30  shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter year of birth">
                         <div class="mt-4 flex">
                             <input type="submit" class="py-1 px-3 border border-gray-300 m-auto rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="Calculate">
                         </div>
@@ -56,8 +56,8 @@
                 </div>
                 <div>
                     <form class="mt-[30px] flex flex-col gap-y-3 px-10 pb-10" id="invest_calculator">
-                        <input type="number" id="invest_amt" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter investment amount">
-                        <select name="" id="duration" class="text-gray-300 py-1 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:outline-0">
+                        <input type="number" id="invest_amt" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter investment amount">
+                        <select name="" id="duration" class="text-gray-300 py-1 bg-gradient-to-br from-gray-500/30 to gray-900/30 shadow-md border border-gray-200/30 rounded-lg focus:outline-0">
                             <option value="">Duration (months)</option>
                             <option value="1" class="text-blue-900">1 Month</option>
                             <option value="2" class="text-blue-900">2 Months</option>
@@ -82,8 +82,8 @@
                 </div>
                 <div>
                     <form class="mt-[30px] flex flex-col gap-y-3 px-10 pb-10" id="loan_form">
-                        <input id="loan_amount" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter amount to borrow">
-                         <select name="" id="loanTime" class="text-gray-300 py-1 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:outline-0">
+                        <input id="loan_amount" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter amount to borrow">
+                         <select name="" id="loanTime" class="text-gray-300 py-1 bg-gradient-to-br from-gray-500/30 to gray-900/30 shadow-md border border-gray-200/30 rounded-lg focus:outline-0">
                             <option value="">Duration (Years)</option>
                             <option value="1" class="text-blue-900">1 Year</option>
                             <option value="2" class="text-blue-900">2 Years</option>
@@ -107,15 +107,15 @@
                 </div>
                 <div>
                     <form class="invest mt-[30px] flex flex-col gap-y-3 px-10 pb-10" id="simple_calcForm">
-                        <input id="first_no" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter first number">
+                        <input id="first_no" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30  shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter first number">
                         <div class="sn_ctn p-2 text-center text-white font-bold"></div>
-                        <input id="second_no" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 backdrop-blur-md shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter second number">
+                        <input id="second_no" type="text" class="p-2 bg-gradient-to-br from-gray-500/30 to gray-900/30 shadow-md border border-gray-200/30 rounded-lg focus:ring-white focus:ring-2 focus:outline-0" placeholder="Enter second number">
                         <div class="flex justify-around">
-                            <button class="add py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">+</button>
-                            <button class="minus py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">-</button>
-                            <button class="division py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">/</button>
-                            <button class="multiply py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">*</button>
-                            <button class="modulos py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300">%</button>
+                            <button class="calcBtn add py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="add">+</button>
+                            <button class="calcBtn minus py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="minus">-</button>
+                            <button class="calcBtn division py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="division">/</button>
+                            <button class="calcBtn multiply py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="multiply">*</button>
+                            <button class="calcBtn modulos py-1 px-3 border border-gray-300 rounded-lg hover:bg-white hover:text-blue-900 hover:font-medium cursor-pointer transition duration-300" value="modulos">%</button>
                         </div>
                         
                         <div class="mt-[20px]">

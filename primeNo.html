@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>About Me</title>
+    <title>JavaScript Project</title>
 </head>
-<body class="bg-gradient-to-r from-black to-blue-700" onload="aboutMe()">
+<body class="bg-gradient-to-r from-black to-blue-700">
     <!-- bg-[linear-gradient(90deg,_black,_blue)] -->
     <section>
         <nav class="m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[50px] md:flex md:items-center md:justify-between sticky top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg">
             <a class="logo text-3xl" href="index.html">DANIEL</a>
             <ul class="gap-4 pb-2 pl-4 text-gray-300 bg-gradient-to-r from-black to-blue-700 md:flex md:items-center z-[-1] md:z-auto md:static absolute backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg border-t-0 w-full left-0 md:w-auto md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-                <li class="md:my-0 my-5"><a href="docs.html" class="text-gray-300 hover:text-white">Documentation</a></li>
+                <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Documentation</a></li>
                 <li class="md:my-0 my-5"><a href="about.html" class="text-gray-300 hover:text-white">About Me</a></li>
                 <li class="md:my-0 my-5">
                     <a href="calculator.html" class="text-gray-300 hover:text-white">Calculator</a>
@@ -26,46 +26,28 @@
             </div>
         </nav>
     
+        
 
         <div class="body">
             <div class="content text-white text-center mt-[20px]">
-                <h1 class="font-bold text-2xl">Day Planner</h1>
+                <h1 class="font-bold text-2xl mb-3">Prime Number Checker</h1>
             </div>
-            <div class="flex md:flex-row md:justify-around flex-col ">
-                <div class="plan pt-4 text-white">
-                    <div class="flex">
-                        <h1 class="font-bold m-auto text-3xl text-center w-[400px] md:text-5xl md:text-center pb-5" id="heading-sm"></h1>
+
+            <div class="px-[40px] md:px-[70px] mt-[90px] lg:px-[140px] xl:px-[200px]">
+                <form class="text-white text-center flex flex-col mt-[40px] bg-gray-500/20 border border-gray-500/30 shadow-lg pb-[30px]">
+                    <div>
+                        <p id="feedback" class="py-[10px] text-lg"></p>
                     </div>
-                    <div class="flex">
-                        <h3 class="w-[400px] m-auto font-bold text-center md:text-center text-xl" id="heading-lg"></h3>
+                    <div class="px-[80px]">
+                        <input id="myInput" class="w-full border boder-[#ddd] focus:border-0 text-xl focus:outline-white px-3 py-1" type="text" placeholder="Enter a number(50 to 100)">
                     </div>
-                    
+                    <input id="checkBtn" class="border-2 border-white p-2 hover:bg-white hover:text-blue-900 hover:font-bold duration-300 rounded-2xl cursor-pointer mx-[170px] md:mx-[200px] lg:mx-[240px] xl:mx-[270px] mt-[40px]" type="submit" value="Check">
+                </form>
+
+                <div class="text-white text-center mt-[50px]">
+                    <h1 class="text-xl pb-[10px] md:text-2xl">All Prime Numbers From 50 to 100</h1>
+                    <p id="primeNoList" class="md:text-xl"></p>
                 </div>
-                <!-- <div class="image flex pt-10 px-[80px] justify-self-center h-[300px] lg:h-[400px]">
-                    <img class="w-full h-[100%]" src="images/day plan.avif" alt="">
-                </div> -->
-            </div>
-        </div>
-
-        <div class="content text-white text-center mt-[30px]">
-            <h1 class="text-2xl mb-1 font-bold">About Me</h1>
-        </div>
-        <div class="container w-full text-white p-4 text-justify md:text-center">
-            <!-- <h1 class="text-center">About Me</h1> -->
-            <p id="about"></p>
-            <p id="dropdown" class="hidden"></p>
-            <div class="button mt-4 flex">
-                <button id="read" class="cursor-pointer border-2 border-gray-300 hover:bg-white hover:text-blue-900 m-auto px-4 py-1 rounded-2xl transition duration-300">Read More</button>
-            </div>
-        
-        </div>
-
-        <div class="flex">
-            <div class=" bg-black p-[20px] h-[1400px] lg:h-[1200px] w-[400px] lg:w-[600px] rounded-lg m-auto mb-[40px]">
-                <p id="jsCode" class="text-white"></p>
-                <p id="jsCode2" class="text-white"></p>
-                <p id="jsCode3" class="text-white"></p>
-
             </div>
         </div>
     
@@ -75,7 +57,6 @@
 
 
     <script src="js/index.js"></script>
-    <script src="js/about.js"></script>
-    <script src="js/dayPlan.js"></script>
+    <script src="js/primeNo.js"></script>
 </body>
 </html>

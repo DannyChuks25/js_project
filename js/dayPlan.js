@@ -80,4 +80,4 @@ else if(hour >=20 && hour <= 24){
 
 
 document.getElementById("heading-sm").innerHTML = `Good ${time_of_day}, Daniel`;
-document.getElementById("heading-lg").innerHTML = `Today is ${today}. It is ${mdn_content}. Get up and go to ${dayEvent}`;
+document.getElementById("heading-lg").innerHTML = `Today is ${today}. It is ${mdn_content}. Get up and go to ${dayEvent}.`;

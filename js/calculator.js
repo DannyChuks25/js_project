@@ -51,11 +51,23 @@ investCalculator.addEventListener("submit", (e) => {
     duration = parseInt(duration);
     console.log(duration);
     console.log(investAmt);
-    let interest = (0.2 * investAmt);
-    let total = interest * duration;
+
+    let time = duration / 12;
+    let interest = (0.2 * investAmt) * time;
+    let monthlyInterest = interest / duration;
+    let total = investAmt + interest;
     console.log(total);
 
-    investFeedback.innerHTML = `You will get N${total} at the end of each month`;
+    let myMth;
+    if(duration == 1){
+        myMth = duration + " "  + "month";
+    } else{
+        myMth = duration + " "  + "months";
+    }
+    
+    investFeedback.innerHTML = `You will get a credit of N${monthlyInterest.toFixed(2)} at the end of each month<br>`;
+    investFeedback.innerHTML += `Therefore, you will get a total of N${total.toFixed(2)} at the end of ${myMth}`;
+
     investFeedback.style.border = "2px solid gray";
 })
 
@@ -106,54 +118,54 @@ function getNums(){
     secondNo = parseInt(secondNo);
     return {firstNo, secondNo};
 }
-let snCtn = document.querySelector(".sn_ctn");    
-    
-addBtn.addEventListener("click", (e) => {        
-    e.preventDefault();
-    let {firstNo, secondNo} = getNums();
-    snCtn.textContent  = addBtn.textContent;
-    //console.log(firstNo+secondNo);
-        
-    let numsTotal = firstNo + secondNo;
-    simpleCalcFeedback.innerHTML = `${firstNo} + ${secondNo} is ${numsTotal}`;
-    simpleCalcFeedback.style.border = "2px solid gray";
-});
 
-subtractBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    let {firstNo, secondNo} = getNums();
-    snCtn.textContent  = subtractBtn.textContent;
-    let numsTotal = firstNo - secondNo;
-    simpleCalcFeedback.innerHTML = `${firstNo} - ${secondNo} is ${numsTotal}`;
-    simpleCalcFeedback.style.border = "2px solid gray";
-});   
+let myCalcBtn = document.querySelectorAll(".calcBtn");
+console.log(myCalcBtn);
 
-divideBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    let {firstNo, secondNo} = getNums();
-    snCtn.textContent = divideBtn.textContent;
-    let numsTotal = firstNo / secondNo;
-    simpleCalcFeedback.innerHTML = `${firstNo} / ${secondNo} is ${numsTotal}`;
-    simpleCalcFeedback.style.border = "2px solid gray";
-}); 
+for(let i = 0; i < myCalcBtn.length; i++){
+    myCalcBtn[i].addEventListener("click", (e) => {
+        e.preventDefault();
+        let {firstNo, secondNo} = getNums();
+        let snCtn = document.querySelector(".sn_ctn");    
+        simpleCalcFeedback.style.border = "2px solid gray";
+        if(myCalcBtn[i].value == "add"){
+            console.log("You chose addition.");
+            //snCtn.textContent  = addBtn.textContent;    
+            let numsTotal = firstNo + secondNo;
+            simpleCalcFeedback.innerHTML = `${firstNo} + ${secondNo} is ${numsTotal}`;
+            snCtn.innerHTML  = addBtn.innerHTML; 
+        }
+        else if(myCalcBtn[i].value == "minus"){
+            console.log("You chose subtraction.");
+            //snCtn.textContent  = subtractBtn.textContent;
+            let numsTotal = firstNo - secondNo;
+            simpleCalcFeedback.innerHTML = `${firstNo} - ${secondNo} is ${numsTotal}`;
+            snCtn.innerHTML  = subtractBtn.innerHTML; 
+        }
+        else if(myCalcBtn[i].value == "multiply"){
+            console.log("You chose multiplication.");
+            //snCtn.textContent = multiplyBtn.textContent;
+            let numsTotal = firstNo * secondNo;
+            simpleCalcFeedback.innerHTML = `${firstNo} * ${secondNo} is ${numsTotal}`;
+            snCtn.innerHTML  = multiplyBtn.innerHTML; 
+        }
+        else if(myCalcBtn[i].value == "division"){
+            console.log("You chose division.");
+            //snCtn.textContent = divideBtn.textContent;
+            let numsTotal = firstNo / secondNo;
+            simpleCalcFeedback.innerHTML = `${firstNo} / ${secondNo} is ${numsTotal.toFixed(2)}`;
+            snCtn.innerHTML  = divideBtn.innerHTML; 
+        }
+        else if(myCalcBtn[i].value == "modulos"){
+            console.log("You chose modulus.");
+            //snCtn.textContent = modulosBtn.textContent;
+            let numsTotal = firstNo % secondNo;
+            simpleCalcFeedback.innerHTML = `${firstNo} % ${secondNo} is ${numsTotal}`;
+            snCtn.innerHTML  = modulosBtn.innerHTML; 
+        }
+    })
+}
 
-multiplyBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    let {firstNo, secondNo} = getNums();
-    snCtn.textContent = multiplyBtn.textContent;
-    let numsTotal = firstNo * secondNo;
-    simpleCalcFeedback.innerHTML = `${firstNo} * ${secondNo} is ${numsTotal}`;
-    simpleCalcFeedback.style.border = "2px solid gray";
-}); 
-
-modulosBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    let {firstNo, secondNo} = getNums();
-    snCtn.textContent = modulosBtn.textContent;
-    let numsTotal = firstNo % secondNo;
-    simpleCalcFeedback.innerHTML = `${firstNo} % ${secondNo} is ${numsTotal}`;
-    simpleCalcFeedback.style.border = "2px solid gray";
-}); 
 // document.addEventListener("DOMContentLoaded", () => {
     
 // })

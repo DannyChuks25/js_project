@@ -36,7 +36,7 @@ function aboutMe(){
         const btn = document.getElementById("read");
         const dropdwown = document.getElementById("dropdown");
 
-        dropdwown.innerHTML = `I am the ${profile.familyPosition} born in my family. I am ${profile.height} tall. I weigh ${profile.weight}. I am ${profile.size}. My hair color is ${profile.hairColor}. I have ${profile.skin} skin. I am ${profile.qualites}. I usually wear a ${profile.glasses}`;
+        dropdwown.innerHTML = `I am the ${profile.familyPosition} born in my family. I am ${profile.height} tall. I weigh ${profile.weight}. I am ${profile.size}. <br>My hair color is ${profile.hairColor}. I have ${profile.skin} skin. I am ${profile.qualites}. I usually wear a ${profile.glasses}`;
         
         btn.addEventListener("click", () => {
             if(btn.innerHTML === "Read More"){

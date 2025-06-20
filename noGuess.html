@@ -9,17 +9,17 @@
 </head>
 <body class="bg-gradient-to-r from-black to-blue-700">
     <!-- bg-[linear-gradient(90deg,_black,_blue)] -->
-    <section>
+    <section class="">
         <nav class="m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[50px] md:flex md:items-center md:justify-between sticky top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg">
-            <span class="logo text-3xl">JS_PROJECT</span>
+            <a class="logo text-3xl" href="index.html">DANIEL</a>
             <ul class="gap-4 pb-2 pl-4 text-gray-300 bg-gradient-to-r from-black to-blue-700 md:flex md:items-center z-[-1] md:z-auto md:static absolute backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg border-t-0 w-full left-0 md:w-auto md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-                <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
-                <li class="md:my-0 my-5"><a href="docs.html" class="text-gray-300 hover:text-white">Documentation</a></li>
+                <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Documentation</a></li>
                 <li class="md:my-0 my-5"><a href="about.html" class="text-gray-300 hover:text-white">About Me</a></li>
                 <li class="md:my-0 my-5">
                     <a href="calculator.html" class="text-gray-300 hover:text-white">Calculator</a>
                 </li>
-                <li class="md:my-0 my-5"><a href="dayPlanner.html" class="text-gray-300 hover:text-white">Day Planner</a></li>
+                <li class="md:my-0 my-5"><a href="noGuess.html" class="text-gray- hover:text-white">No. Guessing Game</a></li>
+                <li class="md:my-0 my-5"><a href="primeNo.html" class="text-gray- hover:text-white">Prime No. Checker</a></li>
             </ul>
             <div class="md:hidden">
                 <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn"></i>
@@ -30,21 +30,29 @@
 
         <div class="body">
             <div class="content text-white text-center mt-[20px]">
-                <h1 class="font-bold text-2xl mb-3">Day Planner</h1>
+                <h1 class="font-bold text-2xl mb-3">Number Guessing Game</h1>
             </div>
-            <div class="flex md:flex-row md:justify-around flex-col ">
-                <div class="plan pt-10 text-white">
-                    <div class="flex">
-                        <h1 class="font-bold m-auto text-3xl text-center w-[400px] md:text-5xl md:text-left pb-5" id="heading-sm"></h1>
+            
+            <div class="px-[40px] md:px-[70px] mt-[90px] lg:px-[140px] xl:px-[200px]">
+                <form id="game-form" class="text-white bg-gray-500/20 border mt-[20px] border-gray-500/30 shadow-lg w-full px-[20px] text-center pb-[20px]">
+                    <h1 class="text-2xl pt-[10px] pb-[30px]">Guess the Number</h1>
+                    <h3 id="feedback" class="py-[10px] text-lg"></h3>
+
+                    <div class="sm:px-[40px] md:px-[70px] lg:px-[140px] xl:px-[200px]">
+                        <input id="input-number" class=" rounded-lg px-3 py-1 border border-[#ddd] text-xl focus:border-0  focus:outline-white w-full" type="text" placeholder="Enter a number (50-70)" required>
                     </div>
-                    <div class="flex">
-                        <h3 class="w-[400px] m-auto font-bold text-center md:text-left text-xl" id="heading-lg"></h3>
+                    <div class="submit-ctn mt-[30px]">
+                        <input id="submit" class="border-2 border-white p-2 hover:bg-white hover:text-blue-900 hover:font-bold duration-300 rounded-2xl cursor-pointer" type="submit" value="Submit Guess">
                     </div>
-                    
-                </div>
-                <div class="image flex pt-10 px-[80px] justify-self-center h-[300px] lg:h-[400px]">
-                    <img class="w-full h-[100%]" src="images/day plan.avif" alt="">
-                </div>
+                    <br><br>
+                    <div class="span">
+                        <span id="score-display">Score: 25</span> | <span id="high-score-display">Highest Score: 0</span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="btn_ctn">
+                <button id="replay" style="display: none;"><strong>Replay</strong></button>
             </div>
         </div>
     
@@ -54,6 +62,6 @@
 
 
     <script src="js/index.js"></script>
-    <script src="js/dayPlan.js"></script>
+    <script src="js/noGuess.js"></script>
 </body>
 </html>
