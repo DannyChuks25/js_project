@@ -235,8 +235,14 @@
   .m-auto {
     margin: auto;
   }
+  .mx-\[100px\] {
+    margin-inline: 100px;
+  }
   .mx-\[170px\] {
     margin-inline: 170px;
+  }
+  .mx-auto {
+    margin-inline: auto;
   }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
@@ -249,9 +255,6 @@
   }
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
-  }
-  .mt-\[0px\] {
-    margin-top: 0px;
   }
   .mt-\[20px\] {
     margin-top: 20px;
@@ -469,8 +472,17 @@
   .px-20 {
     padding-inline: calc(var(--spacing) * 20);
   }
+  .px-\[0px\] {
+    padding-inline: 0px;
+  }
+  .px-\[10px\] {
+    padding-inline: 10px;
+  }
   .px-\[20px\] {
     padding-inline: 20px;
+  }
+  .px-\[30px\] {
+    padding-inline: 30px;
   }
   .px-\[40px\] {
     padding-inline: 40px;
