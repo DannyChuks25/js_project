@@ -10,19 +10,22 @@
 <body class="bg-gradient-to-r from-black to-blue-700">
     <!-- bg-[linear-gradient(90deg,_black,_blue)] -->
     <section>
-        <nav class="m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[50px] md:flex md:items-center md:justify-between sticky top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg">
+        <nav class="m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[80px] md:flex md:items-center md:justify-between sticky top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg">
             <a class="logo text-3xl" href="index.html">DANIEL</a>
             <ul class="gap-4 pb-2 pl-4 text-gray-300 bg-gradient-to-r from-black to-blue-700 md:flex md:items-center z-[-1] md:z-auto md:static absolute backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg border-t-0 w-full left-0 md:w-auto md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
                 <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Documentation</a></li>
                 <li class="md:my-0 my-5"><a href="about.html" class="text-gray-300 hover:text-white">About Me</a></li>
                 <li class="md:my-0 my-5">
-                    <a href="calculator.html" class="text-gray-300 hover:text-white">Calculator</a>
+                    <a href="calculator.html" class="text-gray-300 hover:text-white">Calculator App</a>
                 </li>
                 <li class="md:my-0 my-5"><a href="noGuess.html" class="text-gray- hover:text-white">No. Guessing Game</a></li>
                 <li class="md:my-0 my-5"><a href="primeNo.html" class="text-gray- hover:text-white">Prime No. Checker</a></li>
+                <li class="md:my-0 my-5"><a href="uber_app.html" class="text-gray- hover:text-white">Uber App</a></li>
+                <li class="md:my-0 my-5"><a href="pg_school_App.html" class="text-gray- hover:text-white">PG School App</a></li>
+                <li class="md:my-0 my-5"><a href="birthdayReminder.html" class="text-gray- hover:text-white">Birthday Reminder</a></li>
             </ul>
             <div class="md:hidden">
-                <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn"></i>
+                <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn" onclick="Menu(this)"></i>
             </div>
         </nav>
     
@@ -34,7 +37,7 @@
             </div>
 
             <div class="px-[40px] md:px-[70px] mt-[90px] lg:px-[140px] xl:px-[200px]">
-                <form class="text-white text-center flex flex-col mt-[40px] bg-gray-500/20 border border-gray-500/30 shadow-lg pb-[30px]">
+                <form class="text-white text-center flex flex-col mt-[40px] bg-gray-500/20 border border-gray-500/30 shadow-lg pb-[30px]" id="primeForm">
                     <div>
                         <p id="feedback" class="py-[10px] text-lg"></p>
                     </div>

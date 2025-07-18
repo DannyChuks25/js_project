@@ -1,6 +1,7 @@
 let myInput = document.getElementById("myInput");
 const checkBtn = document.getElementById("checkBtn");
 const feedback = document.getElementById("feedback");
+let primeForm = document.getElementById("primeForm");
 
 // function primeNo(num){
 //     for(let i = 50; i <= 100; i++){
@@ -26,13 +27,18 @@ function primeNo(num) {
     return true;
 }
 
-checkBtn.addEventListener("click", (e) => {
+primeForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let userInput = parseInt(myInput.value);
     console.log(userInput);
     primeNo();
     i = userInput;
-    if(isNaN(userInput)){
+    if(userInput === ""){
+        feedback.textContent = "Please enter a number";
+        feedback.style.color = "red";
+        
+    }
+    else if(isNaN(userInput)){
         feedback.textContent = "Not a number";
         feedback.style.color = "red";
     }
@@ -48,6 +54,8 @@ checkBtn.addEventListener("click", (e) => {
         feedback.textContent = `Wrong! ${userInput} is not a prime number.`;
         feedback.style.color = "#ff4f0f";
     }
+    primeForm.reset();
+    myInput.focus(); 
 })
 
 const primeNoList = document.getElementById("primeNoList"); 

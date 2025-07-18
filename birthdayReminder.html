@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="src/birthdayStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @media screen and (max-width:768px){
+            nav ul{
+            padding-left: 30px;
+            }
+            nav ul li{
+                margin: 20px 0;
+            }
+        }
+        
+    </style>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+</head>
+<body class="bg-gradient-to-r from-black to-blue-700 pb-[40px]">
+    <nav class="m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[80px] md:flex md:items-center md:justify-between top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg">
+            <a class="logo text-3xl" href="index.html">DANIEL</a>
+            <ul class="gap-4 bg-gradient-to-r from-black to-blue-700 text-gray-300 pb-2 pl-4 md:flex md:items-center z-[-1] md:z-auto md:static absolute backdrop-blur-lg  border border-gray-500/30 shadow-lg border-t-0 w-full left-0 md:w-auto md:opacity-100 opacity-0 top-full transition-all ease-in duration-500">
+                <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Documentation</a></li>
+                <li class="md:my-0 my-5"><a href="about.html" class="text-gray-300 hover:text-white">About Me</a></li>
+                <li class="md:my-0 my-5"><a href="calculator.html" class="text-gray-300 hover:text-white">Calculator App</a></li>
+                <li class="md:my-0 my-5"><a href="noGuess.html" class="text-gray- hover:text-white">No. Guessing Game</a></li>
+                <li class="md:my-0 my-5"><a href="primeNo.html" class="text-gray- hover:text-white">Prime No. Checker</a></li>
+                <li class="md:my-0 my-5"><a href="uber_app.html" class="text-gray- hover:text-white">Uber App</a></li>
+                <li class="md:my-0 my-5"><a href="pg_school_App.html" class="text-gray- hover:text-white">PG School App</a></li>
+                 <li class="md:my-0 my-5"><a href="birthdayReminder.html" class="text-gray- hover:text-white">Birthday Reminder</a></li>
+            </ul>
+            <div class="md:hidden">
+                <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn" onclick="Menu(this)"></i>
+            </div>
+    </nav>
+
+
+    <form id="reminderForm">
+        <h1>Birthday Reminder</h1>
+        <div>
+            <label for="name">Full Name</label>
+            <input id="Name" type="text" placeholder="John Doe">
+            <div id="nameFeedback" class="feedback"></div>
+        </div>
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input id="DOB" type="text" placeholder="MM/DD/YYYY">
+            <div id="DOBFeedback" class="feedback"></div>
+        </div>
+        <div>
+            <input type="submit" value="Create">
+        </div>
+    </form>
+
+    <div class="table">
+        <table cellPadding="2">
+            <thead id="tableHead">
+                <th id="ed_del">Action</th>
+                <th>Full Name</th>
+                <th>Next Birthday</th>
+                <th>Countdown</th>
+            </thead>
+            <tbody>
+              
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/birthdayApp.js"></script>
+</body>
+</html>
+  <!-- <tr>
+                    <td id="action">
+                        <i class="fa fa-pencil" aria-hidden="true" title="Edit"></i>
+                        <i class="fa fa-trash" aria-hidden="true" title="Delete"></i>
+                    </td>
+                    <td id="name">Daniel Brian</td>
+                    <td id="dob">11/09/2021</td>
+                    <td id="countdown">00:12:10</td>
+                </tr>
+                <tr>
+                    <td id="action">
+                        <i class="fa fa-pencil" aria-hidden="true" title="Edit"></i>
+                        <i class="fa fa-trash" aria-hidden="true" title="Delete"></i>
+                    </td>
+                    <td id="name">Felicity Smoke</td>
+                    <td id="dob">04/12/2017</td>
+                    <td id="countdown">14:09:01</td>
+                </tr> -->

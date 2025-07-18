@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/uber.css">
+    <link rel="stylesheet" href="dist/output.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>LANDING PAGE</title>
+      <style>
+        @media screen and (max-width:768px){
+            nav ul{
+            padding-left: 30px;
+            }
+            nav ul li{
+                margin: 20px 0;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <nav class="m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[80px] md:flex md:items-center md:justify-between sticky top-0 left-0 backdrop-blur-lg bg-gradient-to-r from-black to-blue-700 border border-gray-500/30 shadow-lg">
+            <a class="logo text-3xl" href="index.html">DANIEL</a>
+            <ul class="gap-4 pb-2 pl-4 text-gray-300 bg-gradient-to-r from-black to-blue-700 md:flex md:items-center z-[-1] md:z-auto md:static absolute backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg border-t-0 w-full left-0 md:w-auto md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Documentation</a></li>
+                <li class="md:my-0 my-5"><a href="about.html" class="text-gray-300 hover:text-white">About Me</a></li>
+                <li class="md:my-0 my-5">
+                    <a href="calculator.html" class="text-gray-300 hover:text-white">Calculator App</a>
+                </li>
+                <li class="md:my-0 my-5"><a href="noGuess.html" class="text-gray- hover:text-white">No. Guessing Game</a></li>
+                <li class="md:my-0 my-5"><a href="primeNo.html" class="text-gray- hover:text-white">Prime No. Checker</a></li>
+                <li class="md:my-0 my-5"><a href="uber_app.html" class="text-gray- hover:text-white">Uber App</a></li>
+                <li class="md:my-0 my-5"><a href="pg_school_App.html" class="text-gray- hover:text-white">PG School App</a></li>
+                <li class="md:my-0 my-5"><a href="birthdayReminder.html" class="text-gray- hover:text-white">Birthday Reminder</a></li>
+            </ul>
+            <div class="md:hidden">
+                <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn" onclick="Menu(this)"></i>
+            </div>
+        </nav>
+
+    <form id="uberForm">
+        <h1 class="text-3xl">Uber</h1>
+        <h3 class="text-xl">Book a ride now</h3>
+        <div>
+            <input type="text" id="pickup" placeholder="Pickup Location">
+            <span id="pickupFeedback"></span>
+            <input type="text" id="dropout" placeholder="Dropdout Location">
+            <span id="dropoutFeedback"></span>
+            
+            <button type="submit">
+                <span>Book Ride</span>
+                <i class="fa fa-book" aria-hidden="true"></i>
+            </button>
+        </div>
+    </form>
+
+    <div class="overlay"></div>
+    <div id="paroo">
+        <p id="message"></p>
+        <p class="text-xl">Please Confirm your ride</p>
+        <div class="buttons">
+            <button id="cancel">
+                <span>Cancel</span>
+                <i class="fa fa-ban" aria-hidden="true"></i>
+            </button>
+            <button id="start">
+                <span>Start Ride</span>
+                <i class="fa fa-hourglass-start" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="timer">
+        <div id="timer-display">
+            <span id="hr">00</span> :
+            <span id="min">00</span> :
+            <span id="sec">00</span>
+        </div>
+        <p>Ride in progress....</p>
+        <p id="message2"></p>
+        <div class="buttons">
+            <button id="pause">
+                <span>Pause</span>
+                <i class="fa fa-pause"></i>
+            </button>
+            <button id="continue">
+                <span>Continue</span>
+                <i class="fa fa-hourglass-start"></i>
+            </button>
+            <button id="stop">
+                <span>Stop Ride</span>
+                <i class="fa fa-stop"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div id="receipt" class="text-sm lg:text-[15px]">
+        <div class="arrow">
+            <i id="back" class="fa fa-arrow-left"></i>
+        </div>
+        <div class="success">
+            <h2 class="lg:text-xl xl:text-2xl">Ride has ended</h2>
+            <i class="fa fa-check"></i>
+        </div>
+        <div class="trip">
+            <h4 id="urtrip" class="font-bold">Your Trip</h4>
+            <div class="tripContent">
+                <h4 id="pickupPlace"></h4>
+                <div>
+                    <p>Pickup</p>
+                    <p id="pickupTime"></p>
+                </div>
+            </div>
+            <div class="tripContent">
+                <h4 id="dropoutPlace"></h4>
+                <div>
+                    <p>Dropout</p>
+                    <p id="dropoutTime"></p>
+                </div>
+            </div>
+            <div class="tripContent">
+                <h4>Time Spent</h4>
+                <div>
+                    <p id="timeSpent"></p>
+                </div>
+            </div>
+        </div>
+        <div class="payment">
+            <h4 id="payment" class="font-bold">Payment</h4>
+             <div id="amount">
+                <h4></h4>
+                <span id="amt">Amount(&#8358;)</span>
+            </div>
+            <div>
+                <h4>Base Fare</h4>
+                <span id="base-fare">1000</span>
+            </div>
+            <div>
+                <h4>Time Fare</h4>
+                <span id="time-fare"></span>
+            </div>
+            <div>
+                <h4>Initial Total</h4>
+                <span id="initial-total"></span>
+            </div>
+            <div>
+                <h4>Tax(10%)</h4>
+                <span id="tax"></span>
+            </div>
+            <hr id="over">
+            <div>
+                <h4>Total Amount</h4>
+                <span id="total-amount"></span>
+            </div>
+            <div class="pay">
+                <button id="pay">Make Payment</button>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+
+    <script src="js/index.js"></script>
+    <script src="./js/uber.js"></script>
+</body>
+</html>

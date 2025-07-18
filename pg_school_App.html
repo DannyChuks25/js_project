@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG SCHOOL SITE TO ADD COURSES</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="src/pg_school_styles.css">
+</head>
+<body class="bg-gradient-to-r from-black to-blue-700">
+    <nav class="absolute m-3 text-gray-300 rounded-lg flex items-center justify-between px-4 h-[80px] md:flex md:items-center md:justify-between top-0 left-0 backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg w-full">
+        <a class="logo text-3xl" href="index.html">DANIEL</a>
+        <ul class="gap-4 pb-2 pl-4 text-gray-300 bg-gradient-to-r from-black to-blue-700 md:flex md:items-center z-[-1] md:z-auto md:static absolute backdrop-blur-lg bg-gray-500/20 border border-gray-500/30 shadow-lg border-t-0 w-full left-0 md:w-auto md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="md:my-0 my-5"><a href="index.html" class="text-gray-300 hover:text-white">Documentation</a></li>
+            <li class="md:my-0 my-5"><a href="about.html" class="text-gray-300 hover:text-white">About Me</a></li>
+            <li class="md:my-0 my-5">
+                <a href="calculator.html" class="text-gray-300 hover:text-white">Calculator App</a>
+            </li>
+            <li class="md:my-0 my-5"><a href="noGuess.html" class="text-gray- hover:text-white">No. Guessing Game</a></li>
+            <li class="md:my-0 my-5"><a href="primeNo.html" class="text-gray- hover:text-white">Prime No. Checker</a></li>
+            <li class="md:my-0 my-5"><a href="uber_app.html" class="text-gray- hover:text-white">Uber App</a></li>
+            <li class="md:my-0 my-5"><a href="pg_school_App.html" class="text-gray- hover:text-white">PG School App</a></li>
+            <li class="md:my-0 my-5"><a href="birthdayReminder.html" class="text-gray- hover:text-white">Birthday Reminder</a></li>
+        </ul>
+        <div class="md:hidden">
+            <i class="fa fa-bars text-3xl cursor-pointer hover:text-white" aria-hidden="true" id="menuBtn" onclick="Menu(this)"></i>
+        </div>
+    </nav>
+    <br><br><br><br>
+    <div class="container text-slate-300">
+        <div class="all-courses">
+            <h3 class="text-blue-700 bg-white">Available Courses</h3>
+            <ul id="available">
+                <li class="course">HEE</li>
+                <li class="course">HEE</li>
+                <li class="course">HEE</li>
+                <li class="course">HEE</li>
+                <li class="course">HEE</li>
+                <li class="course">HEE</li>
+                <li class="course">HEE</li>
+                <li class="course">HEE</li>
+                <li class="course">HEE 9</li>
+                <li class="course">HEE 9</li>
+                <li class="course">HEE 9</li>
+                <li class="course">HEE 9</li>
+                <li class="course">ASE 745</li>
+                <li class="course">CSC 715</li>
+                <li class="course">FEE 716</li>
+            </ul>
+        </div>
+        <div class="add_remove">
+            <button id="add" class="border-2 border-white hover:bg-white hover:text-blue-800 rounded-xl cursor-pointer">Add Course</button>
+            <button id="remove" class="border-2 border-white hover:bg-white hover:text-blue-800 rounded-xl cursor-pointer">Remove Course</button>
+        </div>
+        <div class="added_course">
+            <h3 class="text-blue-700 bg-white">Selected Courses for Registration</h3>
+            <ul id="selected"></ul>
+        </div>
+    </div>
+    <div class="save">
+        <button id="save">Save</button>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/pgSchool.js"></script>
+</body>
+</html>
