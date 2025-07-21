@@ -77,14 +77,14 @@ th, td{
     padding: 10px;
 }
 td{
-    color: rgb(159, 159, 163);
+    color: rgb(221, 221, 224);
 }
 th{
     background-color: blue;
     color: #fff;
 }
 tr:nth-child(even){
-    background-color: #dbdada;
+    background-color: rgb(44, 44, 252);
 }
 table tr td#action{
     display: flex;

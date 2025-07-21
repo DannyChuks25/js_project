@@ -292,7 +292,5 @@ form div input[type="text"]:focus{
     body{
         padding: 0 30px;
     }
-    .receipt{
-        margin: 30px 0;
-    }
+    
 }
