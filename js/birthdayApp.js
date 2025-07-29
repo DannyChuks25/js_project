@@ -12,6 +12,14 @@ let dateRegex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$/;
 let currentEditRow = null;
 let countDown =  document.getElementById("countdown");
 
+function formatDate(dateObj) {
+    let mm = String(dateObj.getMonth() + 1).padStart(2, '0');
+    let dd = String(dateObj.getDate()).padStart(2, '0');
+    let yyyy = dateObj.getFullYear();
+    return `${mm}/${dd}/${yyyy}`;
+}
+
+
 reminderForm.addEventListener("submit", (e) => {
     e.preventDefault();
     user_name = document.getElementById("Name").value;
@@ -43,22 +51,30 @@ reminderForm.addEventListener("submit", (e) => {
 
     function getNextBirthday(dob) {
         let today = new Date();
+        
+        console.log(today);
         let [month, day, year] = dob.split('/').map(Number);
         
         let birthdayThisYear = new Date(today.getFullYear(), month - 1, day);
         console.log(`Today: ${today}`);
+        console.log(birthdayThisYear);
         
         // If birthday has passed this year, set to next year
         if (birthdayThisYear < today) {
             birthdayThisYear.setFullYear(today.getFullYear() + 1);
         }
-        return birthdayThisYear;
+        
+        return birthdayThisYear;    
     }
 
     console.log(getNextBirthday(user_DOB));
 
     function countdown(dateOfBirth, countdownCell){
         const nextBirthday = getNextBirthday(dateOfBirth).getTime();
+        console.log(nextBirthday);
+        
+        console.log(nextBirthday);
+        
         // const birthdayCountDate = new Date(dateOfBirth).getTime();
         const countInterval = setInterval(() => {
             let now = new Date().getTime();
@@ -114,10 +130,13 @@ reminderForm.addEventListener("submit", (e) => {
 
     actionTableData.append(edit,dlt);
     nameTableData.textContent = user_name;
-    nextBddayTableData.textContent = user_DOB;
-    
+    //nextBddayTableData.textContent = user_DOB;
+    let nextBirthdayDate = getNextBirthday(user_DOB);
+    nextBddayTableData.textContent = formatDate(nextBirthdayDate);
+
     //countdownTableData.textContent = countDown();
     formTable.appendChild(tableRow);
+
 
     countdown(user_DOB, countdownTableData);
 

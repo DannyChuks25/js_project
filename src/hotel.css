@@ -1,0 +1,191 @@
+/* FIRST PAGE */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+form label{
+    display: inline-block;
+}
+form{
+    /* color: rgb(4, 250, 4); */
+    /* display: flex; */
+    display: block;
+    position: absolute;
+    top: 50%;
+    /* color: #525151;/ */
+    /* color: rgb(23, 248, 23); */
+    left: 50%;
+    transform: translate(-50%, 20%);
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 10px white;
+    /* margin: 0 80px; */
+    padding-bottom: 30px;
+}
+form label{
+    display: flex;
+    flex-direction: column;
+}
+form label input[type="text"]{
+    /* max-width: 200px; */
+    height: 40px;
+    width: 100%;
+    padding: 0 12px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid silver;
+}
+form label input[type="text"]:focus{
+    border: 2px solid #fff;
+}
+form label .feedback{
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+form label input[type="submit"]{
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 8px 0;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.hotel-container{
+    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content{
+    /* border: 1px solid orange; */
+    /* border: 2px solid red; */
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+/* SECOND PAGE */
+#recommendation-select{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.card label.box{
+    background: #ddd;
+    display: flex;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.card label.box:hover, #checkout:hover{
+    background: #d5bbf7;
+}
+.card label.box .circle{
+    height: 22px;
+    width: 22px;
+    margin-right: 15px;
+    background: #d5bbf7;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    transition: all 0.5s ease;
+    display: inline-block;
+    box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.2);
+}
+.card label.box .accomodation
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+input[type="radio"]{
+    cursor: pointer;
+    display: none;
+}
+#one:checked ~ label.first,
+#two:checked ~ label.second
+{
+    border-color: #8e49e8;
+}
+#one:checked ~ label.first .circle,
+#two:checked ~ label.second .circle
+{
+    border-color: #8e49e8;
+    background-color: #fff;
+}
+
+/* THIRD PAGE */
+#recommendation-feedback{
+    display: none;
+    position: absolute;
+    top: 56%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Fourth Page */
+#room-select{
+    display: none;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+#checkout{
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+#checkout:focus{
+    outline: none;
+    border: 2px solid #8e49e8;
+}
+#one_1:checked ~ label.first,
+#two_2:checked ~ label.second,
+#three_3:checked ~ label.third,
+#four_4:checked ~ label.fourth
+{
+    border-color: #8e49e8;
+}
+#one_1:checked ~ label.first .circle,
+#two_2:checked ~ label.second .circle, 
+#three_3:checked ~ label.third .circle,
+#four_4:checked ~ label.fourth .circle
+{
+    border-color: #8e49e8;
+    background-color: #fff;
+}
+
+#room-feedback{
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Fifth page */
+#countdown-container{
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.feedback{
+    /* border: 1px solid red; */
+    height: 20px;
+    width: 100%;
+}

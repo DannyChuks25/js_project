@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="src/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>JavaScript Project</title>
     <style>
@@ -18,26 +19,30 @@
 </head>
 <body class="bg-gradient-to-r from-black to-blue-700">
     <!-- bg-[linear-gradient(90deg,_black,_blue)] -->
-    <section class="pt-[20px]">
-            <nav class="p-5 md:flex md:items-center md:justify-between sticky top-0 left-0 backdrop-blur-lg bg-gradient-to-r from-black to-blue-700 border-gray-500/30 shadow-lg text-slate-300 h-[80px]">
-        <div class="flex justify-between items-center">
-            <span class="text-2xl">TailWind</span>
-            <span class="text-3xl cursor-pointer block md:hidden mx-2"><i class="fa fa-bars" aria-hidden="true" onclick="Menu(this)"></i></span>
+    <section class="">
+        <header class="menu">
+        <div class="menu-wrap">
+            <h1 class="text-xl md:text-2xl">LOGO</h1>
+            <input type="checkbox" name="" id="checkbox">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Documentation</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="noGuess.html">No. Guess</a></li>
+                    <li><a href="primeNo.html">Prime No.</a></li>
+                    <li><a href="uber_app.html">Uber app</a></li>
+                    <li><a href="pg_school_App.html">PG School</a></li>
+                    <li><a href="birthdayReminder.html">Birthday Reminder</a></li>
+                    <li><a href="Hotel_booking.html">Hotel Booking</a></li>
+                    <li><a href="name_com_form_validation.html">Form Validation</a></li>
+                </ul>
+            </nav>
+            <label for="checkbox" class="ml">
+                <i class="fa fa-bars menu-icon" onclick="Menu(this)"></i>
+            </label>
         </div>
-
-        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-2 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500 md:text-center  backdrop-blur-lg bg-gradient-to-r from-black to-blue-700 border-gray-500/30 custom-shadow md:shadow-none">
-            <li class="mx-4 my-4 md:my-0"><a href="index.html" class="text-[14px] md:text-[16px] hover:text-cyan-500 duration-500">Documentation</a></li>
-            <li class="mx-4 my-4 md:my-0"><a href="about.html" class="text-[14px] md:text-[16px]  hover:text-cyan-500 duration-500">About Me</a></li>
-            <li class="mx-4 my-4 md:my-0"><a href="calculator.html" class="text-[14px] md:text-[16px] hover:text-cyan-500 duration-500">Calculator App</a></li>
-            <li class="mx-4 my-4 md:my-0"><a href="noGuess.html" class="text-[14px] md:text-[16px] hover:text-cyan-500 duration-500">No. Guessing Game</a></li>
-            <li class="mx-4 my-4 md:my-0"><a href="primeNo.html" class="text-[14px] md:text-[16px] hover:text-cyan-500 duration-500">Prime No. Checker</a></li>
-            <li class="mx-4 my-4 md:my-0"><a href="uber_app.html" class="text-[14px] md:text-[16px] hover:text-cyan-500 duration-500">Uber App</a></li>
-            <li class="mx-4 my-4 md:my-0"><a href="pg_school_App.html" class="text-[14px] md:text-[16px] hover:text-cyan-500 duration-500">PG School App</a></li>
-            <li class="md:my-0 my-5"><a href="birthdayReminder.html" class="text-gray- hover:text-white">Birthday Reminder</a></li>
-        
-            <!-- <button class="bg-cyan-700 hover:bg-cyan-500 text-white duration-500 px-6 py-2 mx-4 rounded-2xl" >Get Started</button> -->
-        </ul>
-    </nav>
+    </header>
 
 
     

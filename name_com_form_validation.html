@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name.com Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/form_validate_styles.css">
+</head>
+<body>
+    <header class="menu">
+        <div class="menu-wrap">
+            <h1 class="text-xl md:text-2xl">LOGO</h1>
+            <input type="checkbox" name="" id="checkbox">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Documentation</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="noGuess.html">No. Guess</a></li>
+                    <li><a href="primeNo.html">Prime No.</a></li>
+                    <li><a href="uber_app.html">Uber app</a></li>
+                    <li><a href="pg_school_App.html">PG School</a></li>
+                    <li><a href="birthdayReminder.html">Birthday Reminder</a></li>
+                    <li><a href="Hotel_booking.html">Hotel Booking</a></li>
+                    <li><a href="name_com_form_validation.html">Form Validation</a></li>
+                </ul>
+            </nav>
+            <label for="checkbox" class="ml">
+                <i class="fa fa-bars menu-icon" onclick="Menu(this)"></i>
+            </label>
+        </div>
+    </header>
+
+    <div class="container">
+        <form id="myForm">
+            <h1>Create your account.</h1>
+            <h3>Account Details</h3>
+            <div class="input">
+                <span class="desc">Enter your Email</span>
+                <input id="Email" type="text">
+                <div id="emailFeedback" class="feedback"></div>
+            </div>
+            <div class="input">
+                <span class="desc">Enter your Username</span>
+                <input id="Username" type="text">
+                <div id="nameFeedback" class="feedback"></div>
+            </div>
+            <div class="input pswrd">
+                <span class="desc">Enter your Password</span>
+                <input id="Password" type="text">
+                <div id="passwordFeedback" class="feedback"></div>
+                <span id="pswrd-toggle">&#61550;</span>
+                <div class="validation">
+                    <ul>
+                        <li id="char7">Minimum length 7 characters</li>
+                        <li id="aNum_Sym">Must contain 1 number/symbol</li>
+                        <li id="aLetter">Must contain 1 letter</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="input">
+                <input type="submit" value="Create My Account">
+            </div>
+        </form>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/form_validate.js"></script>
+</body>
+</html>
