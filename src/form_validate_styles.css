@@ -20,6 +20,12 @@ h3{
 }
 form{
     padding: 20px 30px 10px 30px;
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 form .input{
     display: flex;

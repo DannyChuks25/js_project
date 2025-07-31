@@ -16,6 +16,12 @@ availableCourseList.addEventListener('click', e => {
         console.log(e.target.textContent);
         myCourse = e.target.textContent;
         courseElement = e.target;
+
+        const allAvailable = document.querySelectorAll("#available li");
+        allAvailable.forEach(li => li.classList.remove("highlight"));
+        courseElement.classList.add ("highlight");
+        console.log(allAvailable);
+        
     }
 })
 

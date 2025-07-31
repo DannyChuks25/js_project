@@ -16,8 +16,9 @@ form{
     text-align: center;
     max-width: 400px;
     padding: 20px;
+    color: #fff;
     width: 100%;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.9);
 }
 form h1{
     padding: 20px 0;
@@ -40,7 +41,7 @@ form input{
 
 form input[type="text"]:focus{
     /* box-shadow: 0 1px rgba(0,0,0,0.3); */
-    border: 2px solid blue;
+    border: 2px solid #fff;
 }
 form input[type="text"]{
     border: 1px solid #adabab;
